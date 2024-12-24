@@ -3,22 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App Download</title>
+    <title>App Maker</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <header>
-            <img src="app-logo.png" alt="App Logo" class="app-logo">
-            <h1 class="app-title">My Awesome App</h1>
-        </header>
-        <main>
-            <p class="description">Download our app to enjoy exclusive features and stay connected on the go!</p>
-            <a href="app-download-link.apk" class="download-btn" download>Download Now</a>
-        </main>
-        <footer>
-            <p>© 2024 My Awesome App. All rights reserved.</p>
-        </footer>
+        <h1>Simple App Maker</h1>
+        <form id="appForm">
+            <label for="appName">App Name:</label>
+            <input type="text" id="appName" placeholder="Enter app name" required>
+            
+            <label for="appLogo">App Logo URL:</label>
+            <input type="url" id="appLogo" placeholder="Enter logo URL" required>
+            
+            <label for="webLink">Web Link:</label>
+            <input type="url" id="webLink" placeholder="Enter website URL" required>
+            
+            <button type="submit">Generate App</button>
+        </form>
+        <div id="result" class="hidden">
+            <h2>Your App is Ready!</h2>
+            <a id="downloadLink" href="#" download="myApp.html">Download App</a>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
